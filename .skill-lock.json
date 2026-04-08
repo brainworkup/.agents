@@ -1,0 +1,304 @@
+{
+  "version": 3,
+  "skills": {
+    "microsoft-foundry": {
+      "source": "microsoft/azure-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/microsoft/azure-skills.git",
+      "skillPath": ".github/plugins/azure-skills/skills/microsoft-foundry/SKILL.md",
+      "skillFolderHash": "c65c3c317955bb5d5439cdc25c711e7627a9536c",
+      "installedAt": "2026-03-17T05:51:50.373Z",
+      "updatedAt": "2026-04-07T17:18:33.777Z"
+    },
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
+      "installedAt": "2026-03-31T03:59:20.110Z",
+      "updatedAt": "2026-03-31T03:59:20.110Z"
+    },
+    "pdf": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/pdf/SKILL.md",
+      "skillFolderHash": "6369f4649de69bd6857c9bc3b058a77206009238",
+      "pluginName": "document-skills",
+      "installedAt": "2026-04-04T05:14:51.908Z",
+      "updatedAt": "2026-04-04T05:14:51.908Z"
+    },
+    "brainstorming": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/brainstorming/SKILL.md",
+      "skillFolderHash": "f260c775073816860fef8a37c032ac77e2ff5821",
+      "installedAt": "2026-04-04T05:15:59.625Z",
+      "updatedAt": "2026-04-04T05:15:59.625Z"
+    },
+    "dispatching-parallel-agents": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/dispatching-parallel-agents/SKILL.md",
+      "skillFolderHash": "ebd0490e6b0bccfdb9f9c0cc9dd6a066036c8d89",
+      "installedAt": "2026-04-04T05:15:59.948Z",
+      "updatedAt": "2026-04-04T05:15:59.948Z"
+    },
+    "executing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/executing-plans/SKILL.md",
+      "skillFolderHash": "20087d25fb28f5f54578d873dc198ab24b34f967",
+      "installedAt": "2026-04-04T05:16:00.274Z",
+      "updatedAt": "2026-04-04T05:16:00.274Z"
+    },
+    "finishing-a-development-branch": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/finishing-a-development-branch/SKILL.md",
+      "skillFolderHash": "7656b8ebe0c9659ea548ba2981b078b333d1846e",
+      "installedAt": "2026-04-04T05:16:00.676Z",
+      "updatedAt": "2026-04-04T05:16:00.676Z"
+    },
+    "receiving-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/receiving-code-review/SKILL.md",
+      "skillFolderHash": "7750c56fddb8b2f1cbdb1550a6e3e40d2eeac5f1",
+      "installedAt": "2026-04-04T05:16:00.980Z",
+      "updatedAt": "2026-04-04T05:16:00.980Z"
+    },
+    "requesting-code-review": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/requesting-code-review/SKILL.md",
+      "skillFolderHash": "ed265b1a03114cc400d5524afc5c961a4aa9ea8b",
+      "installedAt": "2026-04-04T05:16:01.285Z",
+      "updatedAt": "2026-04-04T05:16:01.285Z"
+    },
+    "subagent-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/subagent-driven-development/SKILL.md",
+      "skillFolderHash": "fbcd94ffcf589754a8ecfa59861cc8843313590e",
+      "installedAt": "2026-04-04T05:16:01.615Z",
+      "updatedAt": "2026-04-04T05:16:01.615Z"
+    },
+    "systematic-debugging": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/systematic-debugging/SKILL.md",
+      "skillFolderHash": "828c239ac986cc1fc7edd10292f66e4a3640e9c0",
+      "installedAt": "2026-04-04T05:16:01.930Z",
+      "updatedAt": "2026-04-04T05:16:01.930Z"
+    },
+    "test-driven-development": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/test-driven-development/SKILL.md",
+      "skillFolderHash": "98904a7d8e0e04b9bd46220b9b17298f45fe0b72",
+      "installedAt": "2026-04-04T05:16:02.228Z",
+      "updatedAt": "2026-04-04T05:16:02.228Z"
+    },
+    "using-git-worktrees": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/using-git-worktrees/SKILL.md",
+      "skillFolderHash": "a5b3f5965f321175a7f07dcadff0bb79adb9e9f7",
+      "installedAt": "2026-04-04T05:16:02.539Z",
+      "updatedAt": "2026-04-04T05:16:02.539Z"
+    },
+    "using-superpowers": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/using-superpowers/SKILL.md",
+      "skillFolderHash": "64c70a2b656d440ddb50818c2477e028facbc468",
+      "installedAt": "2026-04-04T05:16:02.863Z",
+      "updatedAt": "2026-04-04T05:16:02.863Z"
+    },
+    "verification-before-completion": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/verification-before-completion/SKILL.md",
+      "skillFolderHash": "ceb2f1f67f4cadb29b32a06e54d3d0be832071f5",
+      "installedAt": "2026-04-04T05:16:03.169Z",
+      "updatedAt": "2026-04-04T05:16:03.169Z"
+    },
+    "writing-plans": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/writing-plans/SKILL.md",
+      "skillFolderHash": "704e240d4b281baf8a339e1418baa249860197f7",
+      "installedAt": "2026-04-04T05:16:03.481Z",
+      "updatedAt": "2026-04-04T05:16:03.481Z"
+    },
+    "writing-skills": {
+      "source": "obra/superpowers",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/obra/superpowers.git",
+      "skillPath": "skills/writing-skills/SKILL.md",
+      "skillFolderHash": "80e8c7d3be99d55d5d76c9516cc45a1e7f48f281",
+      "installedAt": "2026-04-04T05:16:03.849Z",
+      "updatedAt": "2026-04-04T05:16:03.849Z"
+    },
+    "marketing-psychology": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/marketing-psychology/SKILL.md",
+      "skillFolderHash": "ec8b7c10f5707ab69cd6e658a75480cd3e18ceef",
+      "pluginName": "marketing-skills",
+      "installedAt": "2026-04-04T05:23:09.900Z",
+      "updatedAt": "2026-04-04T05:23:09.900Z"
+    },
+    "social-content": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/social-content/SKILL.md",
+      "skillFolderHash": "52e605622257a4edf647a859bb22707462d83619",
+      "pluginName": "marketing-skills",
+      "installedAt": "2026-04-04T05:25:38.803Z",
+      "updatedAt": "2026-04-04T05:25:38.803Z"
+    },
+    "site-architecture": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/site-architecture/SKILL.md",
+      "skillFolderHash": "3e7439cf233d711b0902c888f2252ef8d16aaa53",
+      "pluginName": "marketing-skills",
+      "installedAt": "2026-04-04T05:25:39.133Z",
+      "updatedAt": "2026-04-04T05:25:39.133Z"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/seo-audit/SKILL.md",
+      "skillFolderHash": "363d92283cd9566761d8ec18d4fa9def5cbc2c29",
+      "pluginName": "marketing-skills",
+      "installedAt": "2026-04-04T05:25:39.509Z",
+      "updatedAt": "2026-04-04T05:25:39.509Z"
+    },
+    "schema-markup": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/schema-markup/SKILL.md",
+      "skillFolderHash": "7a0e3936ea4cc91c8735148d5964cce5c9ce0bfa",
+      "pluginName": "marketing-skills",
+      "installedAt": "2026-04-04T05:25:39.828Z",
+      "updatedAt": "2026-04-04T05:25:39.828Z"
+    },
+    "form-cro": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/form-cro/SKILL.md",
+      "skillFolderHash": "ad53ff2e1e58321af8132170d24bd02b7d2b8d14",
+      "pluginName": "marketing-skills",
+      "installedAt": "2026-04-04T05:25:40.196Z",
+      "updatedAt": "2026-04-04T05:25:40.196Z"
+    },
+    "email-sequence": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/email-sequence/SKILL.md",
+      "skillFolderHash": "24848c6399b82983787ea5afb581572be3c2eaec",
+      "pluginName": "marketing-skills",
+      "installedAt": "2026-04-04T05:25:40.567Z",
+      "updatedAt": "2026-04-04T05:25:40.567Z"
+    },
+    "content-strategy": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/coreyhaines31/marketingskills.git",
+      "skillPath": "skills/content-strategy/SKILL.md",
+      "skillFolderHash": "cacb03a8610f958ece2096ca38d0c96b1b6299bf",
+      "pluginName": "marketing-skills",
+      "installedAt": "2026-04-04T05:25:41.013Z",
+      "updatedAt": "2026-04-04T05:25:41.013Z"
+    },
+    "soultrace": {
+      "source": "soultrace-ai/soultrace-skill",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/soultrace-ai/soultrace-skill.git",
+      "skillPath": "skills/soultrace/SKILL.md",
+      "skillFolderHash": "a469c6b21cdf600a3ab4bf2979b20e83bdee8023",
+      "installedAt": "2026-04-04T05:40:51.009Z",
+      "updatedAt": "2026-04-04T05:40:51.009Z"
+    },
+    "dotenvx": {
+      "source": "motdotla/dotenv",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/motdotla/dotenv.git",
+      "skillPath": "skills/dotenvx/SKILL.md",
+      "skillFolderHash": "b15dfecced1e3aa71d20f54c78845f6b406027bd",
+      "installedAt": "2026-04-07T06:13:40.061Z",
+      "updatedAt": "2026-04-07T06:13:40.061Z"
+    },
+    "dotenv": {
+      "source": "motdotla/dotenv",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/motdotla/dotenv.git",
+      "skillPath": "skills/dotenv/SKILL.md",
+      "skillFolderHash": "df2276d87a3cf97a7869e2748ed3f3a6a321e6fb",
+      "installedAt": "2026-04-07T06:13:40.377Z",
+      "updatedAt": "2026-04-07T06:13:40.377Z"
+    },
+    "langfuse": {
+      "source": "langfuse/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/langfuse/skills.git",
+      "skillPath": "skills/langfuse/SKILL.md",
+      "skillFolderHash": "e5d16bbddf82a9dcc3c52063e4c39f81467dae14",
+      "installedAt": "2026-04-07T22:56:31.332Z",
+      "updatedAt": "2026-04-07T22:56:31.332Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "firebender",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "warp",
+    "openclaw",
+    "qwen-code",
+    "roo",
+    "claude-code",
+    "windsurf",
+    "goose",
+    "cortex",
+    "command-code",
+    "kilo",
+    "mistral-vibe",
+    "pi",
+    "trae"
+  ]
+}
