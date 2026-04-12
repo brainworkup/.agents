@@ -1,6 +1,6 @@
 ---
 name: neuropsych-reports
-description: "Generate clinical neuropsychological evaluation reports from intake data, NSE transcripts, and test score profiles. Covers full-length evaluations, brief/screening batteries, forensic neuropsych, pediatric/geriatric evals, re-evaluations, and IME/disability reports. Use when writing neuropsychological reports, interpreting test scores, summarizing NSE interviews, or documenting cognitive evaluations."
+description: "Generate clinical neuropsychological evaluation reports from intake data, NSE transcripts, and test score profiles. Covers full-length evaluations, brief/screening batteries, forensic neuropsych, pediatric evals, re-evaluations, and IME/disability reports. Use when writing neuropsychological reports, interpreting test scores, summarizing NSE interviews, or documenting cognitive evaluations."
 ---
 
 # Clinical Neuropsychological Evaluation Reports

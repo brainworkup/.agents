@@ -1,0 +1,90 @@
+Title: NSE Chain-of-Density (CoD) Prompt
+
+You are tasked with creating a comprehensive summary of a Neurobehavioral Status Exam (NSE) transcript using an iterative Chain of Density approach. You will progressively refine your analysis through multiple iterations, each time adding more clinical entities while maintaining focus, then produce a final professional markdown report.
+
+Here is the NSE transcript you need to analyze:
+
+<nse_transcript>
+{{NSE_TRANSCRIPT}}
+</nse_transcript>
+
+## Your Task
+
+You will use a Chain of Density (CoD) approach to analyze this transcript. This means you'll create five progressively more detailed summaries, each incorporating additional clinical entities while maintaining the exact same word count. Then you'll use this analysis to generate a comprehensive markdown report.
+
+## Instructions
+
+**Phase 1: Chain of Density Analysis**
+
+Before creating your final report, work through your Chain of Density analysis in <chain_of_density_analysis> tags inside your thinking block. It's OK for this section to be quite long. For each iteration:
+
+1. First, extract and list key clinical entities from the transcript, organizing them by category:
+   - Basic patient information (demographics, chief complaint, initial observations)
+   - Clinical details (symptoms, test observations, clinician impressions)
+   - Behavioral specifics (motor behavior, speech patterns, affect variations)
+   - Background information (medical/family/social history)
+   - Clinical conclusions (diagnostic impressions, treatment considerations)
+
+2. **Initial Summary**: Write a broad summary covering the main points of the NSE intake. Count the words by numbering each word (e.g., 1. Patient 2. presented 3. with...). Note this exact word count.
+
+3. **Iteration 1**: Add 1-3 entities related to basic patient information. Rewrite the summary while maintaining the exact same word count. Count words again to verify. Note which entities you added and what content you compressed.
+
+4. **Iteration 2**: Add 1-3 clinical details. Maintain same word count by compressing existing content. Count words to verify. Note additions and compressions made.
+
+5. **Iteration 3**: Add behavioral specifics. Continue word count constraint. Count words and note changes.
+
+6. **Iteration 4**: Add background information. Compress and rephrase to maintain word count. Count words and note changes.
+
+7. **Iteration 5**: Add final clinical elements. Keep identical word count. Count words and note final changes.
+
+**Phase 2: Final Markdown Report**
+
+Create a professional NSE report following standard clinical format with these sections:
+- Identifying Information and Reason for Referral
+- Background and History (Medical, Developmental, Educational, Social, Emotional, Occupational as applicable)
+- Summary and Conclusions
+
+## Requirements
+
+- Each CoD iteration must have exactly the same word count
+- Focus only on information directly from the transcript
+- Do not make assumptions without empirical evidence
+- Write in third-person, past tense
+- Use professional clinical tone
+- Translate findings into practical daily living implications
+- Final report should be 1-2 pages (3 if necessary)
+- Output final report in clean markdown format
+
+Example markdown structure for your final report:
+
+```markdown
+# NEUROBEHAVIORAL STATUS EXAM
+
+## Identifying Information and Reason for Referral
+[Patient demographics, referral source, and reason for evaluation]
+
+## Background and History
+
+### Medical History
+[Illnesses, surgeries, medications, injuries including TBI]
+
+### Developmental History  
+[Milestones, early development, prenatal/perinatal factors]
+
+### Educational History
+[Academic performance, learning disabilities, behavioral issues]
+
+### Social History
+[Family relationships, social functioning, environmental factors]
+
+### Emotional History
+[Psychiatric symptoms, diagnoses, treatments, family history]
+
+### Occupational History
+[Work history, job performance, vocational functioning]
+
+## Summary and Conclusions
+[Synthesis of findings, diagnostic impressions, recommendations]
+```
+
+Begin your analysis now, working through each Chain of Density iteration before creating your final markdown report. Your final output should consist only of the professional markdown report and should not duplicate or rehash any of the iterative work you did in the thinking block.
