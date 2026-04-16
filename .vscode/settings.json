@@ -1,0 +1,7 @@
+{
+  "files.exclude": {
+    "../.desktop-commander/skills/luria/citation-management": true,
+    "../.desktop-commander/skills/luria/markdown-mermaid-writing": true,
+    "../.desktop-commander/skills/luria/test-driven-development": true
+  }
+}
