@@ -1,0 +1,77 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/citation-management"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/database-lookup"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/finishing-a-development-branch"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/generate-image"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/literature-review"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/markdown-mermaid-writing"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/patient-rag-reliability"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/pdf"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/pyhealth"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/research-grants"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/research-lookup"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/scientific-brainstorming"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/scientific-critical-thinking"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/scientific-schematics"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/scientific-slides"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/scientific-visualization"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/scientific-writing"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/soultrace"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/statistical-analysis"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/statsmodels"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/subagent-driven-development"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/test-driven-development"
+		},
+		{
+			"path": "../.desktop-commander/skills/luria/treatment-plans"
+		}
+	],
+	"settings": {}
+}
