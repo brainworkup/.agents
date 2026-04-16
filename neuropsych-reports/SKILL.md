@@ -1,6 +1,10 @@
 ---
 name: neuropsych-reports
 description: "Generate clinical neuropsychological evaluation reports from intake data, NSE transcripts, and test score profiles. Covers full-length evaluations, brief/screening batteries, forensic neuropsych, pediatric evals, re-evaluations, and IME/disability reports. Use when writing neuropsychological reports, interpreting test scores, summarizing NSE interviews, or documenting cognitive evaluations."
+allowed-tools: Read Write Edit Bash
+license: MIT License
+metadata:
+  skill-author: Adapted from clinical-reports (K-Dense Inc.) for neuropsychology practice
 ---
 
 # Clinical Neuropsychological Evaluation Reports
@@ -10,6 +14,12 @@ description: "Generate clinical neuropsychological evaluation reports from intak
 Write comprehensive, publication-quality clinical neuropsychological evaluation reports that integrate clinical interview data, behavioral observations, standardized test results, and diagnostic impressions into a cohesive narrative. This skill adapts clinical report-writing principles for the specialized domain of neuropsychological assessment.
 
 **Critical Principle:** Neuropsychological reports must be accurate, evidence-based, culturally sensitive, and compliant with APA ethical standards, HIPAA, and applicable state regulations. Reports should translate complex test data into practical, real-world recommendations.
+
+### Critical Principles
+
+- **Privacy**: Treat all patient or evaluee information as protected health or sensitive personal information. Follow HIPAA Safe Harbor de-identification and consent norms described in the sibling skill **clinical-reports** (see [Cross-links to clinical-reports](#cross-links-to-clinical-reports)).
+- **Scope**: Write within the evaluator's role. Do not provide legal advice in forensic sections; document methodology, data, and psycholegal opinions only as a qualified professional would.
+- **Scientific integrity**: Acknowledge limits of tests, norms, and causal inference; address validity and alternative explanations (medical, psychiatric, cultural, linguistic, sensory, effort).
 
 ## When to Use This Skill
 
@@ -24,6 +34,8 @@ Write comprehensive, publication-quality clinical neuropsychological evaluation 
 - Writing re-evaluation/follow-up neuropsychological reports
 - Documenting disability/accommodations evaluations
 - Translating test scores into functional, daily-living implications
+
+For generic SOAP notes, H&P, radiology/pathology/lab reports, trial CSRs, or journal case reports, use **clinical-reports** unless the task is specifically a neuropsychological evaluation narrative.
 
 ## Report Types
 
@@ -50,11 +62,58 @@ For insurance, workers' compensation, or Social Security Disability. Requires ex
 
 ---
 
+## Cross-links to clinical-reports
+
+Reuse these resources from `~/.Codex/skills/clinical-reports/`:
+
+| Need | Location |
+|------|----------|
+| HIPAA Safe Harbor and privacy | `references/regulatory_compliance.md`, `assets/hipaa_compliance_checklist.md` |
+| Scan drafts for HIPAA identifiers | `scripts/check_deidentification.py` |
+| General patient documentation patterns | `references/patient_documentation.md`, SOAP/H&P templates under `assets/` |
+| Tables/figures conventions | `references/data_presentation.md` |
+| CARE case reports (rare neuropsych case write-ups) | `references/case_report_guidelines.md`, `assets/case_report_template.md` |
+
+---
+
+## Visual Enhancement with Scientific Schematics
+
+**MANDATORY: Every completed neuropsychological evaluation report delivered as a polished document SHOULD include at least one clear visual** (figure, table graphic, or AI-generated schematic) that aids the reader—typically a **domain profile**, **timeline**, or **brain–behavior integration** diagram.
+
+Align with the **scientific-schematics** skill and, where available, the clinical-reports workflow:
+
+```bash
+# If your environment includes the clinical-reports schematic helper:
+python ~/.Codex/skills/clinical-reports/scripts/generate_schematic.py "your diagram description" -o figures/neuropsych-profile.png
+```
+
+### Neuropsych-Appropriate Schematic Ideas
+
+- Standardized score profile by cognitive domain (e.g., bar or line plot schematic: attention/executive, memory, language, visuospatial, processing speed)
+- Timeline: injury, disease milestones, treatments, and dates of evaluation
+- Simple brain–behavior diagram when imaging or lesion data is central to the case
+- Flowchart: referral question → hypotheses → data sources → conclusions (useful for complex forensic cases)
+
+Use colorblind-friendly palettes and label axes or domains explicitly.
+
+---
+
+## Report Philosophy
+
+1. **Referral centric**: Every major conclusion should trace to the referral question(s) and documented data.
+2. **Multi-method**: Integrate history, records, observation, and test results; note discrepancies and how you weighed them.
+3. **Domain structure**: Present findings under coherent domains; avoid a bare list of subtests without integration.
+4. **Validity first**: When data warrant, discuss performance validity and symptom validity/exaggeration in a professional, non-pejorative way, with implications for interpretation.
+5. **Transparent limitations**: Norm sample match (age, education, language, culture), sensory capacity, fatigue, medications, and session splits belong in **Limitations**.
+6. **Actionable recommendations**: Tie accommodations, therapies, referrals, and follow-up to specific findings and settings (home, school, work).
+
+---
+
 ## Full Neuropsychological Evaluation Report Structure
 
 ### Report Header
 
-```
+```text
 CONFIDENTIAL NEUROPSYCHOLOGICAL EVALUATION
 
 Patient Name:          [Last, First]
@@ -69,6 +128,8 @@ Evaluating Clinician:  [Name, credentials]
 ### Section 1: Reason for Referral
 
 **Purpose:** State why the evaluation was requested, by whom, and what questions the evaluation aims to answer.
+
+**Alternative section order:** Section order may follow local institutional standards; this outline is a comprehensive default. Some clinicians prefer to place Records Reviewed after Background Information.
 
 **Content:**
 - Referral source and their specific questions
@@ -193,7 +254,7 @@ current neurocognitive functioning.
 
 ### Section 4: Tests Administered
 
-List all measures administered. Group by domain or list alphabetically. Include version numbers.
+List all measures administered. Group by domain or list alphabetically. Include version numbers. Document editions, languages, computerized vs paper administration, and norms reference (e.g., age-appropriate). Brief rationale if selective battery.
 
 **Standard Domains and Common Measures:**
 
@@ -317,6 +378,20 @@ Synthesize all findings into a cohesive clinical narrative.
 
 Provide specific, actionable, numbered recommendations tailored to the individual. Avoid generic boilerplate.
 
+### Section 8: Limitations of Evaluation
+
+Document factors that may qualify interpretation:
+
+- Norm sample match (age, education, language, culture)
+- Sensory capacity (vision, hearing)
+- Fatigue, medications, medical conditions
+- Session splits or incomplete testing
+- Incomplete records or collateral information
+- Language of evaluation vs. patient's primary language
+- Cultural factors affecting test validity
+
+### Section 9: Signature Block
+
 **Recommendation Categories:**
 
 #### Medical/Neurological
@@ -364,8 +439,6 @@ Provide specific, actionable, numbered recommendations tailored to the individua
 - Nutrition
 - Cognitive engagement and social participation
 - Substance use treatment if applicable
-
-### Section 8: Signature Block
 
 ```
 _________________________________
@@ -574,14 +647,44 @@ indicated understanding and provided consent to proceed.
 - Use clear transitions between sections
 - Keep paragraphs focused (one main idea per paragraph)
 
-### Common Pitfalls to Avoid
+### Common Pitfalls
+
+- **Score dump**: Listing scores without narrative integration or referral linkage
+- **Missing validity**: Ignoring PVT/SVT or cooperation when the battery includes them or when data are inconsistent
+- **Causal overreach**: Stating lesion- or event-specific causation without converging evidence
+- **Norm mismatch**: Applying English-language norms without comment to multilingual evaluees
+- **Recommendations vague**: "Follow up with neurology" without indicating why and what question to resolve
+- **Forensic boundary errors**: Answering legal questions (e.g., ultimate legal issue) outside professional or jurisdictional standards—flag for attorney and supervisor review
 - **Over-pathologizing:** Calling Average scores "weaknesses" without premorbid context
 - **Under-contextualizing:** Reporting scores without functional implications
 - **Boilerplate recommendations:** Generic suggestions not tailored to the individual
 - **Missing integration:** Listing scores without explaining the cognitive profile pattern
-- **Ignoring validity:** Interpreting cognitive profiles when validity is compromised
 - **Premature closure:** Diagnosing based on a single data point
 - **Excessive length:** Including irrelevant details that dilute key findings
+
+---
+
+## Quality Assurance
+
+Before sign-out, use `assets/quality_checklist_neuropsych.md`. Run `check_deidentification.py` on drafts that will leave a clinical environment.
+
+---
+
+## Forensic Neuropsychological Addendum (Optional)
+
+Use when the evaluation is retained for legal, administrative, or court-related purposes. Append or integrate per jurisdiction and supervisor guidance. Template: `assets/forensic_neuropsych_addendum_template.md`.
+
+Typical elements:
+
+- **Purpose and scope** — Retention, role (e.g., third-party evaluation), who was examined, what was not done.
+- **Materials reviewed** — Records, depositions index, prior reports.
+- **Psycholegal questions addressed** — Tie opinions to questions actually asked; avoid answering questions outside expertise.
+- **Methodology** — Standardized procedures, collateral limitations.
+- **Factual bases vs opinions** — Clear distinction; cautious causal language.
+- **Alternative hypotheses** — Neurological, psychiatric, malingering, cultural/linguistic, expectable stress.
+- **Limits of opinion** — What data cannot support.
+
+This skill does **not** supply legal strategy or legal conclusions; wording should be reviewed by the retaining professional and counsel when applicable.
 
 ---
 
@@ -640,8 +743,14 @@ Before finalizing any neuropsychological report, verify:
 - [ ] DSM-5-TR / ICD-10 codes included
 - [ ] Recommendations specific, actionable, and individualized
 - [ ] Cultural/linguistic factors addressed
+- [ ] Limitations of evaluation documented
 - [ ] Informed consent documented
 - [ ] Test security maintained (no items/stimuli in report)
 - [ ] HIPAA compliance verified
+- [ ] Visual enhancement included (domain profile, timeline, or brain-behavior diagram)
 - [ ] Report proofread for accuracy, grammar, and tone
 - [ ] Signature block complete with credentials and license
+
+---
+
+**Final note**: Neuropsychological reports influence medical care, education, benefits, and legal proceedings. Prioritize accuracy, clarity, appropriate humility, and respect for the evaluee. When in doubt, narrow the conclusion and broaden the limitations.
