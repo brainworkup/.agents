@@ -7,15 +7,11 @@
 				"--registry",
 				"https://registry.npmjs.org",
 				"@wonderwhy-er/desktop-commander@0.2.38"
-			],
-			"gallery": "https://api.mcp.github.com",
-			"version": "0.2.38"
+			]
 		},
 		"cognitionai/deepwiki": {
 			"type": "http",
-			"url": "https://mcp.deepwiki.com/sse",
-			"gallery": "https://api.mcp.github.com",
-			"version": "1.0.0"
+			"url": "https://mcp.deepwiki.com/sse"
 		}
 	},
 	"inputs": []
