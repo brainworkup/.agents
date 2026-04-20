@@ -1,4 +1,0 @@
-interface:
-  display_name: "Patient RAG Reliability"
-  short_description: "Harden patient RAG reliability and failure handling"
-  default_prompt: "Harden patient-scoped RAG workflows with invariants, retries, and smoke tests."

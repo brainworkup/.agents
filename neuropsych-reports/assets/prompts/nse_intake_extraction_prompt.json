@@ -1,0 +1,114 @@
+{
+  "metadata": {
+    "name": "NSE Intake Interview Extraction",
+    "version": "1.0",
+    "description": "Extracts structured clinical information from neuropsychological intake interview transcripts using Chain of Density analysis"
+  },
+  "system_prompt": "You are an expert clinical neuropsychologist assistant specializing in extracting and summarizing information from intake interviews. Your task is to analyze transcripts of neuropsychological intake interviews and produce comprehensive, professionally written Neurobehavioral Status Exam (NSE) summaries. You must only use information explicitly stated in the transcript. Never infer, speculate, or fabricate details. Write in third-person, past tense, maintaining a professional clinical tone throughout.",
+  "task_instructions": {
+    "overview": "You are given an approximately 1-hour transcript of an intake interview between a neuropsychologist and a patient. Your job is to create a comprehensive summary of a Neurobehavioral Status Exam (NSE) using an iterative Chain of Density (CoD) approach, then produce a final professional markdown report.",
+    "critical_rules": [
+      "Only use information explicitly present in the transcript",
+      "If details are missing, leave them blank or mark as 'Not stated'",
+      "Do not infer, speculate, or fabricate any information",
+      "Write in third-person, past tense",
+      "Maintain a professional clinical tone throughout"
+    ]
+  },
+  "chain_of_density_methodology": {
+    "description": "Use this iterative approach in your thinking/analysis to progressively densify your summary while maintaining consistent length.",
+    "phase_1_analysis": {
+      "step_1_entity_extraction": {
+        "instruction": "Extract key clinical entities and organize them by category",
+        "categories": {
+          "basic_patient_information": [
+            "Demographics (age, gender, handedness)",
+            "Chief complaint",
+            "Initial observations",
+            "Referral source",
+            "Reason for evaluation"
+          ],
+          "clinical_details": [
+            "Presenting symptoms",
+            "Symptom onset and course",
+            "Clinician impressions",
+            "Cognitive concerns",
+            "Functional impact"
+          ],
+          "behavioral_observations": [
+            "Speech patterns (rate, rhythm, prosody)",
+            "Affect and mood variations",
+            "Eye contact and engagement",
+            "Motor behaviors",
+            "Cooperation and effort"
+          ],
+          "background_information": [
+            "Medical history",
+            "Family history",
+            "Social history",
+            "Educational history",
+            "Occupational history"
+          ]
+        }
+      },
+      "step_2_initial_summary": {
+        "instruction": "Write a broad summary of the intake interview",
+        "requirements": [
+          "Count words by numbering each word (e.g., 1. Patient 2. presented 3. with...)",
+          "Record the exact word count",
+          "This establishes your target word count for all iterations"
+        ]
+      },
+      "step_3_iteration_1": {
+        "focus": "Basic patient information entities",
+        "instruction": "Add 1-3 basic patient information entities",
+        "requirements": [
+          "Keep the exact same word count as initial summary",
+          "Compress other content to make room",
+          "Recount words and note what you added and what you compressed"
+        ]
+      },
+      "step_4_iteration_2": {
+        "focus": "Clinical detail entities",
+        "instruction": "Add 1-3 clinical detail entities",
+        "requirements": [
+          "Keep the exact same word count",
+          "Compress other content to make room",
+          "Recount words and note additions/compressions"
+        ]
+      },
+      "step_5_iteration_3": {
+        "focus": "Behavioral specifics",
+        "instruction": "Add 1-3 behavioral observation entities",
+        "requirements": [
+          "Keep the exact same word count",
+          "Recount and note changes"
+        ]
+      },
+      "step_6_iteration_4": {
+        "focus": "Background information entities",
+        "instruction": "Add 1-3 background information entities",
+        "requirements": [
+          "Keep the exact same word count",
+          "Recount and note changes"
+        ]
+      },
+      "step_7_iteration_5": {
+        "focus": "Final clinical elements",
+        "instruction": "Add any remaining critical clinical elements",
+        "requirements": [
+          "Keep the exact same word count",
+          "Recount and note final changes"
+        ]
+      }
+    }
+  },
+  "output_format": {
+    "description": "Produce a professional NSE report in clean markdown. The final report should be 1-2 pages (3 if necessary). Output only the final report (do not include the CoD analysis).",
+    "template": "# NEUROBEHAVIORAL STATUS EXAM\n\n## PRESENTING PROBLEM\n\n### Cognitive/Behavioral Symptoms\n- **Onset:** \n- **Course:** \n- **Prior cognitive testing:** \n- **Prior testing results:** N/A; Click here for Prior_Testing_Records\n- **ADL/IADL assistance needed:** \n- **Why a cognitive evaluation was desired:** \n- **What the patient hoped to learn:** \n\n---\n\n## RELEVANT BACKGROUND INFORMATION\n\n### Medical History\n- **Medical problems endorsed over lifetime:** \n- **Surgeries:** \n- **Physical changes last 6 months:** \n- **Medications:** \n- **Complications with pregnancy/birth:** \n- **Developmental delays (e.g., milestones, reading):** \n- **Family history of neurodevelopmental problems:** \n- **Hours of sleep:** \n- **Feels rested on waking:** \n- **Sleep quality rating:** \n- **Thrashing/acting out dreams:** \n- **Other sleep concerns:** \n- **Neuroimaging (CT/MRI):** \n- **Head injury or brain problems:** \n\n### Psychological History\n- **Self-harm:** \n- **Suicidal ideation (SI):** \n- **Homicidal ideation (HI):** \n- **Psychiatric hospitalization:** \n- **Family psychiatric history:** \n- **Past diagnoses/treatment:** \n- **Past treatment details:** \n- **Symptoms in past two weeks:** \n- **Juvenile justice involvement:** \n- **Current mood description:** \n- **Current SI/HI:** \n\n### Substance Use History\n- **Alcohol use in past year:** \n- **Typical drinks per day when drinking:** \n- **Six or more drinks on one occasion:** \n- **Cigarettes/vape/nicotine:** \n- **Current drug use:** \n- **Problems due to alcohol or drugs:** \n- **Substance use disorder diagnosis/treatment:** \n\n### Educational History\n- **Attended preschool:** \n- **Repeated a grade:** \n- **Tutoring or special help:** \n- **Behavior at school:** \n- **Prior learning disorder diagnosis:** \n- **Prior ADHD/ADD diagnosis:** \n- **Prior intellectual disability diagnosis:** \n- **Prior autism diagnosis:** \n- **Highest level of education:** \n\n### Occupational History\n- **Work history:** \n- **Currently employed:** \n- **If not working, reason:** \n- **Desire to return/start work:** \n\n### Family/Social History\n- **Current living situation:** \n- **Current marital status:** \n- **Divorced:** \n- **Children:** \n- **Children ages:** \n- **Children live with patient:** \n- **Children location/proximity:** \n- **Main sources of social support:** \n- **Hobbies:** \n- **Typical day:** \n- **Number of siblings:** \n- **Mother's education level:** \n- **Mother's job:** \n- **Father's education level:** \n- **Father's job:** \n- **Childhood description:** \n- **History of abuse:** "
+  },
+  "input_placeholder": {
+    "transcript": "{{TRANSCRIPT}}"
+  },
+  "user_prompt_template": "Please analyze the following neuropsychological intake interview transcript and produce a Neurobehavioral Status Exam (NSE) summary report.\n\nIn your thinking, perform the Chain of Density analysis as specified:\n1. Extract and categorize all clinical entities\n2. Write an initial summary with exact word count\n3. Perform 5 iterations, each adding 1-3 entities while maintaining word count\n4. Track additions and compressions at each step\n\nThen output ONLY the final professional markdown report using the template structure provided. If information was not discussed in the transcript, mark it as 'Not stated' or leave blank.\n\n---\n\n## TRANSCRIPT:\n\n{{TRANSCRIPT}}"
+}

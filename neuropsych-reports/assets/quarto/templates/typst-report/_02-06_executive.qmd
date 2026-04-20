@@ -1,0 +1,230 @@
+## Attention/Executive {#sec-executive}
+
+{{< include _02-06_executive_text.qmd >}}
+
+```{r}
+#| label: setup-executive
+#| include: false
+
+# Load required packages
+suppressPackageStartupMessages({
+  library(here)
+  library(tidyverse)
+  library(gt)
+  library(gtExtras)
+  library(neuro2)
+})
+
+# Define domains
+domains <- "Attention/Executive"
+
+# Load and process data
+processor <- DomainProcessorR6$new(
+  domains = domains,
+  pheno = "executive",
+  input_file = "data/neurocog.parquet"
+)
+
+processor$load_data()
+processor$filter_by_domain()
+processor$select_columns()
+
+# Main data object
+executive_data <- processor$data
+```
+
+```{r}
+#| label: text-executive
+#| cache: true
+#| include: false
+#| results: asis
+
+# Generate text using R6 class
+if (nrow(executive_data) > 0) {
+  results_processor <- NeuropsychResultsR6$new(
+    data = executive_data,
+    file = "_02-06_executive_text.qmd"
+  )
+  results_processor$process()
+}
+```
+
+```{r}
+#| label: qtbl-executive
+#| include: false
+
+keep <- list(
+  "dkefs" = c(
+    "Inhibition",
+    "Inhibition/Switching",
+    "Inhibition Total Errors",
+    "Inhibition/Switching Total Errors"
+  ),
+  "nabs" = c(
+    "NAB Attention Index",
+    "Orientation",
+    "Digits Forward",
+    # "Digits Forward Longest Span",
+    "Digits Backward",
+    # "Digits Backward Longest Span",
+    # "Numbers & Letters Part A Speed",
+    # "Numbers & Letters Part A Errors",
+    "Numbers & Letters Part A Efficiency",
+    "Numbers & Letters Part B Efficiency",
+    "NAB Executive Functions Index",
+    "Mazes",
+    "Word Generation"
+    # "Word Generation Perseverations"
+  ),
+  "tmt" = c("TMT, Part A", "TMT, Part B"),
+  "wisc5" = c(
+    "Running Digits",
+    "Letter-Number Seq.",
+    "Symbol Span",
+    "Coding",
+    "Symbol Search"
+  )
+)
+
+executive_data_table <- executive_data |> dplyr::filter(scale %in% keep)
+
+if (nrow(executive_data) > 0) {
+  # Generate table
+  table_executive <- TableGTR6$new(
+    data = executive_data_table,
+    pheno = "executive",
+    table_name = "table_executive",
+    vertical_padding = 0
+  )
+  tbl <- table_executive$build_table()
+  table_executive$save_table(tbl, dir = here::here("figs"))
+}
+```
+
+```{r}
+#| label: fig-executive-subdomain
+#| include: false
+
+if (nrow(executive_data) > 0) {
+  # Generate subdomain figure
+  if (all(c("z_mean_subdomain", "subdomain") %in% names(executive_data))) {
+    # Remove NA values for plotting
+    data_subdomain <- executive_data[
+      !is.na(executive_data$z_mean_subdomain) &
+        !is.na(executive_data$subdomain),
+    ]
+
+    if (nrow(data_subdomain) > 0) {
+      dotplot_subdomain <- DotplotR6$new(
+        data = data_subdomain,
+        x = "z_mean_subdomain",
+        y = "subdomain",
+        filename = here::here("figs", "fig_executive_subdomain.svg")
+      )
+      dotplot_subdomain$create_plot()
+    }
+  }
+}
+```
+
+```{r}
+#| label: fig-executive-narrow
+#| include: false
+#| eval: true
+
+if (nrow(executive_data) > 0) {
+  # Generate narrow figure
+  if (all(c("z_mean_narrow", "narrow") %in% names(executive_data))) {
+    # Remove NA values for plotting
+    data_narrow <- executive_data[
+      !is.na(executive_data$z_mean_narrow) & !is.na(executive_data$narrow),
+    ]
+
+    if (nrow(data_narrow) > 0) {
+      dotplot_narrow <- DotplotR6$new(
+        data = data_narrow,
+        x = "z_mean_narrow",
+        y = "narrow",
+        filename = here::here("figs", "fig_executive_narrow.svg")
+      )
+      dotplot_narrow$create_plot()
+    }
+  }
+}
+
+# Try to load custom title from sysdata.rda
+sysdata_path <- here::here("R", "sysdata.rda")
+if (file.exists(sysdata_path)) {
+  sysdata_env <- new.env()
+  load(sysdata_path, envir = sysdata_env)
+  custom_title_name <- paste0("plot_title_", "executive")
+  if (exists(custom_title_name, envir = sysdata_env)) {
+    plot_title_executive <- get(custom_title_name, envir = sysdata_env)
+  }
+}
+```
+
+```{=typst}
+// Define a function to create a domain with a title, a table, and a figure
+#let domain(title: none, file_qtbl, file_fig) = {
+  let font = (font: "Roboto Slab", size: 0.7em)
+  set text(..font)
+
+  // Make all figure labels (Table X:, Figure X:) bold
+  show figure.caption: it => {
+    context {
+      let supplement = it.supplement
+      let counter = it.counter.display(it.numbering)
+      block[*#supplement #counter:* #it.body]
+    }
+  }
+
+  pad(top: 0.5em)[]
+  grid(
+    columns: (50%, 50%),
+    gutter: 8pt,
+    figure(
+      [#image(file_qtbl)],
+      caption: figure.caption(position: top, [#title]),
+      kind: "qtbl",
+      supplement: [*Table*],
+    ),
+    figure(
+      [#image(file_fig, width: auto)],
+      caption: figure.caption(
+        position: bottom,
+        [`{r} plot_title_executive`],
+      ),
+      placement: none,
+      kind: "image",
+      supplement: [*Figure*],
+      gap: 0.5em,
+    ),
+  )
+}
+```
+
+<!-- ```{=typst}
+// Define the title of the domain
+#let title = "Attention/Executive"
+// Define the file name of the table
+#let file_qtbl = "figs/table_executive.png"
+// Define the file name of the figure
+#let file_fig = "figs/fig_executive_subdomain.svg"
+// The title is appended with ' Scores'
+#domain(title: [#title Scores], file_qtbl, file_fig)
+``` -->
+
+```{=typst}
+// #import "@preview/muchpdf:0.1.1": muchpdf
+// #muchpdf(read("figs/table_executive.pdf", encoding: none))
+// Define the title of the domain
+#let title = "Attention/Executive"
+// Define the file name of the table
+#let file_qtbl = "figs/table_executive.png"
+// Define the file name of the figure
+#let file_fig = "figs/fig_executive_narrow.svg"
+// The title is appended with ' Scores'
+#domain(title: [#title Scores], file_qtbl, file_fig)
+```
+

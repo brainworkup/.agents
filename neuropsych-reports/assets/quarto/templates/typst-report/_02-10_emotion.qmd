@@ -1,0 +1,253 @@
+## Emotional/Behavioral/Social/Personality {#sec-emotion}
+
+{{< include _02-10_emotion_text.qmd >}}
+
+```{r}
+#| label: setup-emotion
+#| include: false
+
+# Load required packages
+suppressPackageStartupMessages({
+  library(here)
+  library(tidyverse)
+  library(gt)
+  library(gtExtras)
+  library(neuro2)
+})
+
+# Define domains
+domains <- "Emotional/Behavioral/Social/Personality"
+
+# Load and process data
+processor <- DomainProcessorR6$new(
+  domains = domains,
+  pheno = "emotion",
+  input_file = "data/neurobehav.parquet"
+)
+
+processor$load_data()
+processor$filter_by_domain()
+processor$select_columns()
+
+# Main data object
+emotion_data <- processor$data
+```
+
+```{r}
+#| label: text-emotion
+#| cache: true
+#| include: false
+
+# Generate text using R6 class
+if (nrow(emotion_data) > 0) {
+  results_processor <- NeuropsychResultsR6$new(
+    data = emotion_data,
+    file = "_02-10_emotion_text.qmd"
+  )
+  results_processor$process()
+}
+```
+
+```{r}
+#| label: qtbl-emotion-adult
+#| dev: tikz
+#| fig-process: pdf2png
+#| include: false
+options(tikzDefaultEngine = "xetex")
+
+# Define the specific order of scales
+scale_order <- c(
+  "Somatic Complaints",
+  "Anxiety",
+  "Anxiety-Related Disorders",
+  "Depression",
+  "Mania",
+  "Paranoia",
+  "Social Detachment",
+  "Schizophrenia",
+  "Borderline Features",
+  "Antisocial Features",
+  "Alcohol Problems",
+  "Drug Problems",
+  "Stress",
+  "Nonsupport"
+)
+
+# Filter and arrange the data in the specified order for the table
+emotion_data_table <- emotion_data |>
+  dplyr::filter(scale %in% scale_order) |>
+  dplyr::mutate(scale = factor(scale, levels = scale_order)) |>
+  dplyr::arrange(scale)
+
+if (nrow(emotion_data_table) > 0) {
+  # Generate table
+  table_emotion <- TableGTR6$new(
+    data = emotion_data_table,
+    pheno = "emotion",
+    table_name = "table_emotion",
+    vertical_padding = 0
+  )
+  tbl <- table_emotion$build_table()
+  table_emotion$save_table(tbl, dir = here::here())
+}
+```
+
+```{r}
+#| label: fig-emotion-subdomain
+#| include: false
+#| eval: true
+
+if (nrow(emotion_data) > 0) {
+  # Generate subdomain figure
+  if (all(c("z_mean_subdomain", "subdomain") %in% names(emotion_data))) {
+    # Remove NA values for plotting
+    data_subdomain <- emotion_data[
+      !is.na(emotion_data$z_mean_subdomain) & !is.na(emotion_data$subdomain),
+    ]
+
+    if (nrow(data_subdomain) > 0) {
+      fig_path <- here::here("figs", "fig_emotion_subdomain")
+
+      # Create plot object
+      dotplot_subdomain <- DotplotR6$new(
+        data = data_subdomain,
+        x = "z_mean_subdomain",
+        y = "subdomain"
+      )
+
+      # Save as PNG
+      dotplot_subdomain$filename <- paste0(fig_path, ".png")
+      dotplot_subdomain$create_plot()
+
+      # Save as PDF
+      dotplot_subdomain$filename <- paste0(fig_path, ".pdf")
+      dotplot_subdomain$create_plot()
+
+      # Save original SVG for compatibility
+      dotplot_subdomain$filename <- paste0(fig_path, ".svg")
+      dotplot_subdomain$create_plot()
+    }
+  }
+}
+```
+
+```{r}
+#| label: fig-emotion-narrow
+#| include: false
+#| eval: true
+
+if (nrow(emotion_data) > 0) {
+  # Generate subdomain figure
+  if (all(c("z_mean_narrow", "narrow") %in% names(emotion_data))) {
+    # Remove NA values for plotting
+    data_narrow <- emotion_data[
+      !is.na(emotion_data$z_mean_narrow) & !is.na(emotion_data$narrow),
+    ]
+
+    if (nrow(data_narrow) > 0) {
+      fig_path <- here::here("figs", "fig_emotion_narrow")
+
+      # Create plot object
+      dotplot_narrow <- DotplotR6$new(
+        data = data_narrow,
+        x = "z_mean_narrow",
+        y = "narrow"
+      )
+
+      # Save as PNG
+      dotplot_narrow$filename <- paste0(fig_path, ".png")
+      dotplot_narrow$create_plot()
+
+      # Save as PDF
+      dotplot_narrow$filename <- paste0(fig_path, ".pdf")
+      dotplot_narrow$create_plot()
+
+      # Save original SVG for compatibility
+      dotplot_narrow$filename <- paste0(fig_path, ".svg")
+      dotplot_narrow$create_plot()
+    }
+  }
+}
+
+# Ensure plot title exists
+plot_title_emotion <- "Emotional and behavioral functioning reflects psychological adjustment and regulation."
+
+# Try to load custom title from sysdata.rda
+sysdata_path <- here::here("R", "sysdata.rda")
+if (file.exists(sysdata_path)) {
+  sysdata_env <- new.env()
+  load(sysdata_path, envir = sysdata_env)
+  custom_title_name <- paste0("plot_title_", "emotion")
+  if (exists(custom_title_name, envir = sysdata_env)) {
+    plot_title_emotion <- get(custom_title_name, envir = sysdata_env)
+  }
+}
+```
+
+```{=typst}
+// Define a function to create a domain with a title, a table, and a figure
+#let domain(title: none, file_qtbl, file_fig) = {
+  let font = (font: "Roboto Slab", size: 0.7em)
+  set text(..font)
+
+  // Make all figure labels (Table X:, Figure X:) bold
+  show figure.caption: it => {
+    context {
+      let supplement = it.supplement
+      let counter = it.counter.display(it.numbering)
+      block[*#supplement #counter:* #it.body]
+    }
+  }
+
+  pad(top: 0.5em)[]
+  grid(
+    columns: (50%, 50%),
+    gutter: 8pt,
+    figure(
+      [#image(file_qtbl)],
+      caption: figure.caption(position: top, [#title]),
+      kind: "qtbl",
+      supplement: [*Table*],
+    ),
+    figure(
+      [#image(file_fig, width: auto)],
+      caption: figure.caption(
+        position: bottom,
+        [`{r} plot_title_emotion`],
+      ),
+      placement: none,
+      kind: "image",
+      supplement: [*Figure*],
+      gap: 0.5em,
+    ),
+  )
+}
+```
+
+```{=typst}
+// Define the title of the domain
+#let title = "Emotional/Behavioral/Social/Personality"
+
+// Define the file name of the table
+#let file_qtbl = "figs/table_emotion.png"
+
+// Define the file name of the figure
+#let file_fig = "figs/fig_emotion_subdomain.svg"
+
+// The title is appended with ' Scores'
+#domain(title: [#title Scores], file_qtbl, file_fig)
+```
+
+```{=typst}
+// Define the title of the domain
+#let title = "Emotional/Behavioral/Social/Personality"
+
+// Define the file name of the table
+#let file_qtbl = "figs/table_emotion.png"
+
+// Define the file name of the figure
+#let file_fig = "figs/fig_emotion_narrow.svg"
+
+// The title is appended with ' Scores'
+#domain(title: [#title Scores], file_qtbl, file_fig)
+```

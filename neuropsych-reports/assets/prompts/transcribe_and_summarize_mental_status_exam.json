@@ -1,0 +1,44 @@
+{
+  "task": "transcribe_and_summarize_mental_status_exam",
+  "instructions": {
+    "objective": "Transcribe the full audio of a 1-hour clinical neuropsychological interview, then extract and summarize the Mental Status Exam (MSE) as assessed by the neuropsychologist during the session.",
+    "output_format": {
+      "transcript": "Full verbatim transcription (optional, if model supports long-context output)",
+      "summary": {
+        "MENTAL_STATUS_EXAM_BY_NEUROPSYCHOLOGIST": {
+          "Appearance/Dress": "String — describe attire and grooming as noted or inferred",
+          "Behavior": "String — describe cooperation, motor activity, eye contact, etc.",
+          "Speech": "String — rate (e.g., rapid, slowed), rhythm (e.g., pressured, monotone), volume (e.g., soft, loud)",
+          "Mood": "String — patient’s self-reported mood (e.g., 'anxious', 'euthymic', 'irritable')",
+          "Affect": "String — observed emotional expression (e.g., 'constricted', 'labile', 'appropriate and full range')",
+          "Thought_Process": "String — coherence and organization (e.g., 'tangential', 'linear and goal-directed')",
+          "Thought_Content": "String — presence/absence of delusions, obsessions, suicidal/homicidal ideation",
+          "Perception": "String — report of hallucinations or illusions; specify modality if present",
+          "Cognition/Orientation": "String — level of alertness and orientation (×3 or ×4); include attentional observations if salient",
+          "Insight/Judgment": "String — degree of awareness of condition and appropriateness of decision-making"
+        }
+      }
+    },
+    "guidelines": [
+      "Base the MSE summary solely on explicit statements or direct behavioral observations made by the neuropsychologist or patient during the interview.",
+      "Use formal, objective, clinical terminology consistent with neuropsychological reporting standards.",
+      "If a domain is not addressed or cannot be confidently inferred, mark as 'Not assessed' or 'Not documented'.",
+      "Avoid interpretation beyond what is supported by the transcript.",
+      "Maintain patient anonymity: do not extract or retain identifying information (e.g., names, dates, locations)."
+    ],
+    "example_output_snippet": {
+      "MENTAL_STATUS_EXAM_BY_NEUROPSYCHOLOGIST": {
+        "Appearance/Dress": "Casual and well-groomed.",
+        "Behavior": "Cooperative; no abnormal movements observed.",
+        "Speech": "Normal rate, rhythm, and volume.",
+        "Mood": "Euthymic.",
+        "Affect": "Appropriate, with full range.",
+        "Thought_Process": "Linear, goal-directed.",
+        "Thought_Content": "No evidence of delusions, obsessions, or thought disorder.",
+        "Perception": "No hallucinations or perceptual disturbances reported.",
+        "Cognition/Orientation": "Alert and oriented to person, place, and time.",
+        "Insight/Judgment": "Appears intact."
+      }
+    }
+  }
+}

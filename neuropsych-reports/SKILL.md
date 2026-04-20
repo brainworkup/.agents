@@ -4,7 +4,7 @@ description: "Generate clinical neuropsychological evaluation reports from intak
 allowed-tools: Read Write Edit Bash
 license: MIT License
 metadata:
-  skill-author: Adapted from clinical-reports (K-Dense Inc.) for neuropsychology practice
+  skill-author: Joey W. Trampush, Ph.D.
 ---
 
 # Clinical Neuropsychological Evaluation Reports
@@ -40,39 +40,128 @@ For generic SOAP notes, H&P, radiology/pathology/lab reports, trial CSRs, or jou
 ## Report Types
 
 ### 1. Full Neuropsychological Evaluation (Standard)
+
 The most comprehensive report type. Typically 8–20 pages. Used for differential diagnosis, treatment planning, academic/vocational accommodations, and disability determination.
 
-### 2. Brief/Screening Cognitive Assessment
+#### Brief/Screening Cognitive Assessment
+
 Shorter report (3–6 pages) for focused referral questions, competency screenings, or bedside cognitive evaluations (e.g., MoCA, MMSE-based).
 
-### 3. Pediatric Neuropsychological Evaluation
+### 2. Pediatric Neuropsychological Evaluation
+
 Adapted for children/adolescents. Emphasizes developmental history, school functioning, behavioral rating scales, and educational recommendations (IEP/504 plans).
 
-### 4. Geriatric/Dementia Evaluation
-Focused on progressive cognitive decline, capacity assessments, caregiver input, and staging of neurodegenerative disease.
+### 3. Forensic Neuropsychological Report
 
-### 5. Forensic Neuropsychological Report
-For legal proceedings. Requires heightened attention to validity testing, malingering assessment, and Daubert/Frye admissibility standards.
+For legal proceedings. Requires heightened attention to validity testing,
+malingering assessment, and Daubert/Frye admissibility standards.
 
-### 6. Re-evaluation/Follow-up Report
-Documents change from baseline. Emphasizes reliable change index (RCI) methodology, practice effects, and comparative analysis.
+Forensic neuropsychological evaluations are critical in legal settings, blending the expertise of neuropsychology with legal requirements. With our extensive experience and qualifications in this field, clients are assured of comprehensive and ethical evaluations.
 
-### 7. IME/Disability Evaluation
-For insurance, workers' compensation, or Social Security Disability. Requires explicit functional capacity statements.
+Definition
+
+    Forensic neuropsychology is a specialized branch of neuropsychology that applies its principles to legal matters.
+
+Scope
+
+It goes beyond general neuropsychology by focusing on issues such as competency and criminal responsibility.
+
+Application
+
+These evaluations are essential in various legal contexts, aiding in decision-making processes.
+
+Services Offered
+
+We provide several types of evaluations, including competency evaluations and criminal responsibility assessments, following evidence-based practices and ethical guidelines.
+
+Who Can Benefit?
+
+Our services are beneficial to lawyers, courts, and insurance companies, providing essential insights in legal cases.
+
+We adhere to the highest standards of confidentiality and legal compliance in our practice.
+
+
+#### Independent Medical Exams
+
+Expert forensic, medicolegal, and IME evaluations for neurodevelopmental, psychiatric, and traumatic brain injury.
+Background
+
+Dr. Trampush conducts independent neurocognitive and personality medical examinations (IMEs) in the medicolegal context for both private law firms and federal agencies as an expert witness. To purpose of this work is to identify the impact of neurodevelopmental disorders, traumatic brain injuries, and traumatic stress on clients, assisting in determining appropriate compensation, sentencing, and treatment strategies.
+Overview of Exam Procedures
+
+The process involves comprehensive evaluations for individuals experiencing psychological or neuropsychological issues due to various factors, including but not limited to developmental history, medical history, injuries or traumatic events. The focus is on creating medical-legal reports that cater to the specific needs of clients requiring unbiased disability assessments.
+
+The evaluations are based on a reasonable degree of medical certainty and utilize evidence-based psychological and neuropsychological tests. The goal is to ascertain the impact of the event on the individual and suggest treatment options aimed at enhancing their quality of life.
+Key points:
+
+    Evaluations are thorough: We employ a comprehensive approach to assess the impact of injuries or trauma on psychological and neuropsychological functioning.
+    Reports are impartial and evidence-based: Our medical-legal reports are grounded in evidence-based testing and objective analysis, ensuring unbiased conclusions.
+    We identify impact and provide recommendations: We assess how events affected the individual and offer treatment suggestions to improve their quality of life.
+    Common reasons for testing: The document lists various situations where such evaluations are often requested, including emotional distress, discrimination, trauma exposure, accidents, and legal matters.
+
+Focus on Impact and Potential Solutions
+
+The assessment aims to identify how the event affected the individual. Treatment recommendations are provided to improve the individual’s quality of life.
+
+After we complete the evaluation, we will write a comprehensive report that integrates our findings, reviews the course of the injury, discusses your or your client’s prognosis, and provide appropriate recommendations.
+
+
+#### Mental Health Diversion Report
+
+An Introduction to Mental Health Diversion Evaluations
+
+In recent years, the intersection of mental health and the criminal justice system has become a focal point of discussion and legislation. In 2018, a significant stride was made when Governor Jerry Brown signed into law Senate Bill 215. This bill paved the way for a pre-trial diversion program specifically designed for defendants who are suffering from a mental disorder and stand accused of committing certain crimes.
+Understanding the Impact of Senate Bill 215
+
+The implications of Senate Bill 215 are far-reaching. It offers a potential lifeline for individuals whose mental disorders may have played a significant role in their alleged criminal activities. Instead of facing the traditional punitive measures, these individuals are given the opportunity to complete a treatment program.
+
+The benefits of this approach are two-fold. If the accused completes the treatment, not only will the criminal charges be dismissed, but their arrest record will also be sealed. This allows for a fresh start, free from the stigma of a criminal record.
+Key Aspects of Senate Bill 215:
+
+    Eligibility and Exclusions: Defendants charged with either a felony or misdemeanor can qualify for mental health diversion, except for certain serious crimes. These ineligible crimes include murder, voluntary manslaughter, rape, lewd acts on a child under 14, assault with intent to commit rape, sodomy, or oral copulation, continuous sexual abuse of a child, and certain violations related to weapons of mass destruction​​.
+
+    Mental Disorders Criteria: To qualify, defendants must suffer from a mental disorder as specified in the Diagnostic and Statistical Manual of Mental Disorders (DSM), excluding Antisocial Personality Disorder, Borderline Personality Disorder, and Pedophilia. Common qualifying conditions include schizophrenia, bipolar disorder, and post-traumatic stress disorder​.
+
+    Program Duration and Requirements: The diversion program can last up to two years, during which the defendant must agree to participate, waive their right to a speedy trial, and comply with all treatment program requirements. A qualified mental health professional must evaluate and conclude that the defendant will benefit from treatment. Additionally, the court must determine that the individual will not pose an unreasonable risk to public safety​​.
+
+    Treatment Programs: The program can include inpatient or outpatient treatment, and may also encompass alcohol or drug treatment. The treatment can be funded by private or public sources, and regular progress reports must be provided to the court, the defense, and the prosecutor​​.
+
+    Outcome upon Completion: If the defendant successfully completes the treatment program, the charges are dismissed, and the arrest record is sealed and destroyed, effectively erasing the incident from the defendant’s record. However, there are exceptions where the sealed records can be accessed, such as for peace officer applications or by criminal justice agencies​​.
+
+    Distinction from PEN 1001.36: Senate Bill 215 also established PEN 1001.82, which differs from the original mental health diversion program under PEN 1001.36. The diversion under PC 1001.82 is only available for misdemeanors or felonies punishable in county jails, not state prisons. Certain felonies, such as DUI offenses causing injuries, joyriding, manslaughter, drug crimes, gun crimes, and child pornography, may not qualify for the diversion program under PEN 1001.82​​​​.
+
+    Overall Impact: This program aims to provide defendants with the necessary mental health treatment and counseling, potentially avoiding jail time for crimes committed as a result of their mental illness​​.
+
+Our Approach to Mental Health Diversion Evaluations
+
+As experts in mental health evaluations, we believe in a collaborative approach. We work closely with the client, their family, their mental health treatment providers, and their attorney to conduct a comprehensive mental health diversion evaluation.
+
+Our in-depth assessment is designed to answer the critical questions related to the mental health diversion criteria. This includes:
+
+    Confirming if the defendant suffers from a mental disorder. It’s important to note that Antisocial Personality Disorder, Borderline Personality Disorder, and Pedophilic Disorder are excluded from this category.
+    Determining if the mental disorder played a significant role in the defendant’s involvement in the alleged crime.
+    Evaluating whether the defendant’s symptoms that may have motivated the criminal behavior would respond positively to mental health treatment.
+    Establishing whether the defendant agrees to comply with the treatment as a condition of diversion.
+    Assessing if the defendant, if treated in the community, will pose an unreasonable risk of danger to public safety, as defined in PC 1170.18.
+
+By providing these evaluations, we hope to contribute to a more understanding and compassionate approach to criminal justice, where mental health is given the consideration it deserves.
+
 
 ---
 
 ## Cross-links to clinical-reports
 
-Reuse these resources from `~/.Codex/skills/clinical-reports/`:
+Reuse these resources from `~/skills/skills/clinical-reports/`:
 
 | Need | Location |
 |------|----------|
 | HIPAA Safe Harbor and privacy | `references/regulatory_compliance.md`, `assets/hipaa_compliance_checklist.md` |
 | Scan drafts for HIPAA identifiers | `scripts/check_deidentification.py` |
-| General patient documentation patterns | `references/patient_documentation.md`, SOAP/H&P templates under `assets/` |
-| Tables/figures conventions | `references/data_presentation.md` |
-| CARE case reports (rare neuropsych case write-ups) | `references/case_report_guidelines.md`, `assets/case_report_template.md` |
+| General patient documentation patterns | `references/patient_documentation.md`|
+| Reports templates under | `assets/quarto/templates` |
+| Report writing instructions | `references/report_writing_instructions.md` |
+| Tables conventions | `references/data_presentation.md` |
+| Figures conventions | `references/data_presentation.md` |
 
 ---
 
@@ -132,17 +221,20 @@ Evaluating Clinician:  [Name, credentials]
 **Alternative section order:** Section order may follow local institutional standards; this outline is a comprehensive default. Some clinicians prefer to place Records Reviewed after Background Information.
 
 **Content:**
+
 - Referral source and their specific questions
 - Patient's/family's primary concerns
 - Purpose of the evaluation (differential diagnosis, treatment planning, accommodations, forensic, disability, etc.)
 - Brief description of presenting problems
 
 **Style:**
+
 - 1–2 paragraphs
 - Third person, past tense
 - Professional, neutral tone
 
 **Example:**
+
 ```
 [Patient] is a [age]-year-old [handedness], [language-dominant], [sex] who was
 referred for neuropsychological evaluation by [referring provider, credentials] to
@@ -216,6 +308,7 @@ This section integrates all relevant history. Draw from the clinical interview (
 - Social functioning and interpersonal relationships
 
 **Writing Guidelines for Background:**
+
 - Use Chain of Density (CoD) approach: start broad, progressively add detail
 - Integrate information from multiple sources; note discrepancies
 - Maintain chronological flow within each subsection
@@ -228,6 +321,7 @@ This section integrates all relevant history. Draw from the clinical interview (
 Document the patient's presentation and behavior during testing. This section provides validity context and supports diagnostic formulation.
 
 **Include:**
+
 - General appearance (grooming, dress, apparent vs. stated age)
 - Orientation (person, place, time, situation)
 - Motor observations (gait, tremor, lateralized findings, fine motor)
@@ -241,6 +335,7 @@ Document the patient's presentation and behavior during testing. This section pr
 - Validity of results statement (is the profile considered valid and representative?)
 
 **Example:**
+
 ```
 [Patient] presented as a well-groomed [sex] who appeared [his/her/their] stated
 age. [He/She/They] was alert, fully oriented, and cooperative throughout the
@@ -279,32 +374,25 @@ This is the core clinical section. Present results domain-by-domain with interpr
 
 #### Score Classification System
 
-Use a consistent normative framework throughout. Common systems:
+Use a consistent normative framework throughout. We have adopted the AACN standards:
 
-| Standard Score Range | Percentile Range | Classification |
-|---------------------|-----------------|----------------|
-| ≥ 130 | ≥ 98th | Very Superior |
-| 120–129 | 91st–97th | Superior |
-| 110–119 | 75th–90th | High Average |
-| 90–109 | 25th–74th | Average |
-| 80–89 | 9th–24th | Low Average |
-| 70–79 | 2nd–8th | Borderline |
-| ≤ 69 | ≤ 1st | Extremely Low / Impaired |
 
-**Alternatively (T-score system):**
-
-| T-Score Range | Classification |
-|--------------|----------------|
-| ≥ 70 | Very Superior |
-| 60–69 | Above Average |
-| 40–59 | Average |
-| 30–39 | Below Average |
-| 20–29 | Impaired |
-| < 20 | Severely Impaired |
+#three-line-table[
+|*Range*|*Standard Score*|*_T_ Score*|*Scaled Score*|*z-Score*|*Percentile (‰)*|
+|---|---|---|---|---|---|
+|Exceptionally high score|130 +|70 +|16 +|2 +|98 +|
+|Above average score|120 – 129|63 – 69|14 – 15|1.3 – 1.9|91 – 97|
+|High average score|110 – 119|57 – 62|12 – 13|0.7 – 1.2|75 – 90|
+|Average score|90 – 109|44 – 56|9 – 11|-0.7 – 0.6|25 – 74|
+|Low average score|80 – 89|37 – 43|7 – 8|-1.3 – -0.6|9 – 24|
+|Below average score|70 – 79|30 – 36|4 – 6|-2 – -1.4|2 – 8|
+|Exceptionally low score|< 70|< 30|< 4|< -2|< 2|
+]
 
 #### Domain-by-Domain Interpretation Guide
 
 For each cognitive domain, provide:
+
 1. **Test(s) administered** and scores (SS, %ile, T-score, z-score as appropriate)
 2. **Normative classification** (e.g., "Average range")
 3. **Clinical interpretation** — what the score means functionally
@@ -312,6 +400,7 @@ For each cognitive domain, provide:
 5. **Contextual factors** — premorbid estimate, effort, cultural/linguistic considerations
 
 **Domain Template:**
+
 ```
 #### [Domain Name] (e.g., Attention and Executive Function)
 
@@ -323,12 +412,13 @@ applicable]. [Integration with clinical presentation and daily functioning].
 ```
 
 **Score Table Format:**
+
 ```
-| Measure | Subtest/Index | Raw | Standard Score | Percentile | Classification |
-|---------|--------------|-----|---------------|------------|----------------|
-| WAIS-V  | FSIQ         | --  | 98            | 45th       | Average        |
-| WAIS-V  | VCI          | --  | 105           | 63rd       | Average        |
-| WAIS-V  | PRI          | --  | 92            | 30th       | Average        |
+| Scale | Score | Percentile | Range |
+|-----|-----|---------|------|
+| FSIQ  | 98   | 45th       | Average |
+| VCI   | 105  | 63rd       | Average |
+| PRI   | 92   | 30th       | Average |
 ```
 
 #### Key Interpretive Principles
@@ -350,6 +440,7 @@ applicable]. [Integration with clinical presentation and daily functioning].
 Synthesize all findings into a cohesive clinical narrative.
 
 **Structure:**
+
 1. **Opening summary** — restate referral question and key demographics (1–2 sentences)
 2. **Cognitive profile summary** — strengths, weaknesses, overall pattern (1 paragraph)
 3. **Integration with history** — how cognitive findings relate to medical/psychiatric history (1–2 paragraphs)
@@ -395,6 +486,7 @@ Document factors that may qualify interpretation:
 **Recommendation Categories:**
 
 #### Medical/Neurological
+
 - Referrals (neurology, psychiatry, primary care, sleep medicine)
 - Neuroimaging (MRI, PET) if indicated
 - Laboratory workup (B12, folate, thyroid, RPR, metabolic panel)
@@ -402,18 +494,21 @@ Document factors that may qualify interpretation:
 - Follow-up neuropsychological evaluation (with timeline)
 
 #### Psychological/Psychiatric
+
 - Psychotherapy modality (CBT, DBT, EMDR, supportive)
 - Psychiatric medication consultation
 - Support groups
 - Crisis resources if applicable
 
 #### Cognitive Rehabilitation / Compensatory Strategies
+
 - Cognitive rehabilitation therapy
 - External memory aids (calendars, smartphones, pill organizers, alarms)
 - Environmental modifications (reduce distractions, structured routines)
 - Cognitive exercises (specify type, not just "brain games")
 
 #### Educational (for children/students)
+
 - IEP or 504 plan recommendations
 - Specific accommodations (extended time, preferential seating, reduced workload, assistive technology)
 - Tutoring or specialized instruction (Orton-Gillingham for dyslexia, etc.)
@@ -421,12 +516,14 @@ Document factors that may qualify interpretation:
 - Transition planning (for adolescents)
 
 #### Vocational/Occupational
+
 - Vocational rehabilitation referral
 - Workplace accommodations (written instructions, task checklists, reduced multitasking)
 - Fitness for duty considerations
 - Disability determination support
 
 #### Safety / Functional
+
 - Driving evaluation referral
 - Independent living assessment
 - Capacity considerations (medical, financial, legal)
@@ -434,6 +531,7 @@ Document factors that may qualify interpretation:
 - Fall prevention
 
 #### Lifestyle
+
 - Exercise recommendations
 - Sleep hygiene
 - Nutrition
@@ -468,6 +566,7 @@ When working from a Neurobehavioral Status Exam (NSE) transcript:
 5. **Final review:** Ensure no relevant information is omitted regardless of where it appeared in the transcript
 
 ### NSE Summary Output Target
+
 - 1–3 pages covering Reason for Referral + Background/History
 - Focus on information directly relevant to the chief complaint
 - Note discrepancies between sources (patient vs. collateral vs. records)
@@ -485,6 +584,7 @@ Always include a comprehensive score table, either integrated within domain sect
 **Required columns:** Measure, Subtest/Index, Standard Score (or T-score/Scaled Score), Percentile, Classification
 
 **Formatting rules:**
+
 - Use consistent score metric within each table
 - Bold or highlight significantly impaired scores
 - Include confidence intervals where clinically relevant
@@ -549,17 +649,20 @@ When evaluating patients from diverse backgrounds:
 For evaluations of children/adolescents, add:
 
 ### Teacher/School Input
+
 - Teacher rating scales (BRIEF, Conners, BASC)
 - Classroom observations (if conducted)
 - Review of educational records (report cards, standardized testing, IEP documents)
 
 ### Developmental History (Expanded)
+
 - Pregnancy and birth complications
 - Milestone achievement (sitting, walking, first words, sentences)
 - Early intervention services
 - Daycare/preschool concerns
 
 ### Adaptive Behavior
+
 - Vineland-3 or ABAS-3 scores
 - Self-care, communication, socialization, motor skills
 - Comparison of adaptive functioning to cognitive ability
@@ -571,6 +674,7 @@ For evaluations of children/adolescents, add:
 For evaluations of older adults with suspected neurodegenerative disease:
 
 ### Collateral Interview Summary
+
 - Informant relationship and reliability
 - Onset and progression of cognitive/functional changes
 - Comparison to prior level of functioning
@@ -578,17 +682,20 @@ For evaluations of older adults with suspected neurodegenerative disease:
 - Behavioral changes (personality, apathy, disinhibition, psychosis)
 
 ### Functional Assessment
+
 - Instrumental ADLs (finances, medications, transportation, meal preparation)
 - Basic ADLs (grooming, dressing, toileting, feeding)
 - Safety concerns (wandering, leaving stove on, falls)
 
 ### Capacity Considerations
+
 - Medical decision-making capacity
 - Financial capacity
 - Testamentary capacity (if requested)
 - Driving capacity
 
 ### Staging (if applicable)
+
 - CDR (Clinical Dementia Rating) stage
 - GDS (Global Deterioration Scale) stage
 - Functional Assessment Staging (FAST) if applicable
@@ -598,6 +705,7 @@ For evaluations of older adults with suspected neurodegenerative disease:
 ## Regulatory and Ethical Compliance
 
 ### APA Ethical Standards
+
 - Competence (Standard 2.01)
 - Informed consent (Standard 3.10, 9.03)
 - Maintaining test security (Standard 9.11)
@@ -606,18 +714,22 @@ For evaluations of older adults with suspected neurodegenerative disease:
 - Use of assessments (Standard 9.02)
 
 ### HIPAA Compliance
+
 - De-identify per Safe Harbor method (18 identifiers) for case examples
 - Minimum necessary disclosure
 - Secure storage and transmission of reports
 - Patient authorization for release
 
 ### Test Security
+
 - Do NOT include actual test items or stimuli in reports
 - Do NOT include verbatim responses that reveal test content
 - DO include scores, error types, and qualitative descriptions of performance
 
 ### Informed Consent Documentation
+
 Include a statement such as:
+
 ```
 Prior to the evaluation, informed consent was obtained. The purpose, nature, and
 limitations of the evaluation were explained. [Patient / Patient's legal guardian]
@@ -629,18 +741,21 @@ indicated understanding and provided consent to proceed.
 ## Writing Style Guide
 
 ### Tone and Voice
+
 - Third person, past tense (evaluation already occurred)
 - Professional, clinical, and objective
 - Positive but neutral (avoid pejorative language)
 - Patient-centered (person-first language unless patient prefers otherwise)
 
 ### Language Precision
+
 - Use "suggests" or "is consistent with" rather than "proves" or "confirms"
 - Use "low average range" rather than "below average" when score is 80–89
 - Avoid deficit language when scores are within normal limits
 - Distinguish between "impaired" (statistically and clinically significant) and "relatively lower" (within normal variability)
 
 ### Readability
+
 - Write for a professional but non-specialist audience (referring physicians, educators, attorneys)
 - Define uncommon neuropsychological terms
 - Avoid excessive jargon
@@ -691,6 +806,7 @@ This skill does **not** supply legal strategy or legal conclusions; wording shou
 ## Integration with Other Skills
 
 This skill integrates with:
+
 - **clinical-reports**: General clinical documentation framework
 - **scientific-writing**: Professional medical writing standards
 - **scientific-schematics**: Generate cognitive profile visualizations
@@ -702,6 +818,7 @@ This skill integrates with:
 ## Resources
 
 ### Reference Files
+
 - `references/neuropsych_test_compendium.md` — Common tests by domain with normative information
 - `references/diagnostic_frameworks.md` — DSM-5-TR NCD criteria, ADHD, LD, ASD frameworks
 - `references/score_classification_systems.md` — Normative classification tables
@@ -710,6 +827,7 @@ This skill integrates with:
 - `references/data_presentation_and_terminology.md` — Score table design, neuropsych abbreviations, ICD-10 codes, neuroanatomical terminology
 
 ### Template Assets
+
 - `assets/full_neuropsych_report_template.md` — Complete report template
 - `assets/brief_cognitive_assessment_template.md` — Screening/brief report template
 - `assets/pediatric_neuropsych_template.md` — Pediatric evaluation template
@@ -719,6 +837,7 @@ This skill integrates with:
 - `assets/nse_summary_template.md` — NSE transcript summary template
 
 ### Automation Scripts
+
 - `scripts/classify_scores.py` — Convert raw/standard scores to normative classifications
 - `scripts/validate_neuropsych_report.py` — Check report completeness against required sections
 - `scripts/generate_score_table.py` — Generate formatted score tables from data input

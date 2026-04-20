@@ -1,0 +1,149 @@
+{
+  "task": "neurobehavioral_status_exam_extraction",
+  "instructions": {
+    "objective": "Perform structured extraction and synthesis of clinical information from a 1-hour neuropsychological intake interview transcript using a Chain of Density (CoD) approach, resulting in a professional markdown-formatted Neurobehavioral Status Exam report.",
+    "transcript_constraints": {
+      "source": "1-hour audio transcript of neuropsychological intake interview",
+      "evidence_standard": "Extract ONLY information explicitly stated in the transcript",
+      "missing_data_handling": "Leave blank or mark as 'Not stated' - DO NOT infer or speculate",
+      "tone_and_style": "Third-person, past tense, professional clinical tone throughout"
+    },
+    "methodology": {
+      "chain_of_density_analysis": {
+        "location": "Must be performed internally in <chain_of_density_analysis> section within thinking block",
+        "iteration_requirements": {
+          "word_count_constraint": "All iterations must maintain EXACT same word count as initial summary",
+          "iteration_1": "Add 1-3 basic patient information entities (demographics, chief complaint, initial observations)",
+          "iteration_2": "Add 1-3 clinical detail entities (symptoms, clinician impressions)",
+          "iteration_3": "Add 1-3 behavioral specifics (speech patterns, affect variations)",
+          "iteration_4": "Add 1-3 background information entities (medical/family/social history)",
+          "iteration_5": "Add final clinical elements while maintaining word count"
+        },
+        "documentation_requirements": [
+          "Word-by-word counting for initial summary (e.g., '1. Patient 2. presented 3. with...')",
+          "Explicit notation of added entities and compressed content for each iteration",
+          "Verification of identical word count across all iterations"
+        ]
+      }
+    },
+    "output_requirements": {
+      "final_report": {
+        "format": "Clean markdown only - NO meta-commentary or CoD analysis in final output",
+        "length": "1-2 pages (3 pages maximum)",
+        "structure": {
+          "sections": ["PRESENTING PROBLEM", "RELEVANT BACKGROUND INFORMATION"],
+          "subsections": {
+            "PRESENTING_PROBLEM": [
+              "Cognitive/Behavioral Symptoms",
+              "Onset",
+              "Course",
+              "Prior cognitive testing",
+              "Prior testing results",
+              "ADL/IADL assistance needed",
+              "Why a cognitive evaluation was desired",
+              "What the patient hoped to learn"
+            ],
+            "RELEVANT_BACKGROUND_INFORMATION": {
+              "Medical": [
+                "Medical problems endorsed over lifetime",
+                "Surgeries",
+                "Physical changes last 6 months",
+                "Medications",
+                "Complications with pregnancy/birth",
+                "Developmental delays",
+                "Family history of neurodevelopmental problems",
+                "Hours of sleep",
+                "Feels rested on waking",
+                "Sleep quality rating",
+                "Thrashing/acting out dreams",
+                "Other sleep concerns",
+                "Neuroimaging (CT/MRI)",
+                "Head injury or brain problems"
+              ],
+              "Psychological": [
+                "Self-harm",
+                "SI (suicidal ideation)",
+                "HI (homicidal ideation)",
+                "Psychiatric hospitalization",
+                "Family history",
+                "Past diagnoses/treatment",
+                "Past treatment details",
+                "Symptoms in past two weeks",
+                "Juvenile justice involvement",
+                "Current mood description",
+                "Current SI/HI"
+              ],
+              "Substance_Use": [
+                "Alcohol use in past year",
+                "Typical drinks per day when drinking",
+                "Six or more drinks on one occasion",
+                "Cigarettes/vape/nicotine",
+                "Current drug use",
+                "Problems due to alcohol or drugs",
+                "Substance use disorder diagnosis/treatment"
+              ],
+              "Educational_and_Work_History": [
+                "Attended preschool",
+                "Repeated a grade",
+                "Tutoring or special help",
+                "Behavior at school",
+                "Prior learning disorder diagnosis",
+                "Prior ADHD/ADD diagnosis",
+                "Prior intellectual disability diagnosis",
+                "Prior autism diagnosis",
+                "Highest level of education",
+                "Work history",
+                "Currently employed",
+                "If not working, reason",
+                "Desire to return/start work"
+              ],
+              "Family_Social": [
+                "Current living situation",
+                "Current marital status",
+                "Divorced",
+                "Children",
+                "Children ages",
+                "Children live with patient",
+                "Children location/proximity",
+                "Main sources of social support",
+                "Hobbies",
+                "Typical day",
+                "Number of siblings",
+                "Mother's education level",
+                "Mother's job",
+                "Father's education level",
+                "Father's job",
+                "Childhood description",
+                "History of abuse"
+              ]
+            }
+          }
+        },
+        "formatting_guidelines": [
+          "Use bullet points or concise paragraphs as appropriate",
+          "Leave fields blank or mark 'Not stated' for missing information",
+          "Maintain objective, neutral clinical tone throughout",
+          "Use markdown headers (## for main sections, ### for subsections)",
+          "Do not include hyperlinks or external references unless explicitly stated in transcript"
+        ]
+      }
+    },
+    "quality_control": {
+      "validation_steps": [
+        "Verify all content derives directly from transcript statements",
+        "Confirm no diagnostic inferences made without explicit evidence",
+        "Ensure consistent third-person, past tense usage",
+        "Validate word count consistency across CoD iterations",
+        "Check for proper handling of missing/ambiguous information"
+      ],
+      "prohibited_actions": [
+        "Making assumptions about unstated information",
+        "Including personal interpretations or clinical opinions",
+        "Using first-person perspective or present tense",
+        "Exceeding page length requirements",
+        "Including CoD analysis in final output"
+      ]
+    },
+    "example_output_guidance": "## PRESENTING PROBLEM\n\n**Cognitive/Behavioral Symptoms:**\n- Patient reported increasing difficulty with word-finding during conversations\n- Spouse observed instances of forgetting familiar names\n\n**Onset:** Gradual onset approximately 8 months prior to evaluation\n\n**Course:** Slowly progressive decline noted over past 6 months\n\n**Prior cognitive testing:** Not stated\n\n**Prior testing results:** Not applicable\n\n**ADL/IADL assistance needed:** Requires occasional reminders for medication management\n\n**Why a cognitive evaluation was desired:** To determine cause of memory changes and appropriate interventions\n\n**What the patient hoped to learn:** Whether symptoms represent normal aging or require medical attention\n\n## RELEVANT BACKGROUND INFORMATION\n\n### Medical\n\n- **Medical problems endorsed over lifetime:** Hypertension (diagnosed 2019), type 2 diabetes (diagnosed 2021)\n- **Surgeries:** Appendectomy (age 28)\n- **Physical changes last 6 months:** Unintentional weight loss of 10 pounds\n- **Medications:** Lisinopril 10mg daily, Metformin 500mg twice daily\n- **Complications with pregnancy/birth:** Not stated\n- **Developmental delays:** Not stated\n- **Family history of neurodevelopmental problems:** Father diagnosed with dementia at age 75\n- **Hours of sleep:** 6 hours per night\n- **Feels rested on waking:** 'Sometimes'\n- **Sleep quality rating:** 5/10\n- **Thrashing/acting out dreams:** Denies\n- **Other sleep concerns:** Occasional difficulty falling asleep\n- **Neuroimaging (CT/MRI):** Brain MRI performed 4 months ago; results not discussed during interview\n- **Head injury or brain problems:** Single concussion at age 16 following sports injury\n\n[Additional sections follow same pattern with 'Not stated' for missing information]"
+  }
+}
