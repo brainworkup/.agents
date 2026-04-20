@@ -4,17 +4,17 @@
 
 | File | Description |
 |------|-------------|
-| [`neuropsych_reporting_standards.md`](neuropsych_reporting_standards.md) | Original summary of common neuropsychological report expectations; links to public professional resources (AACN, NAN, APA). |
+| [neuropsych_reporting_standards.md](neuropsych_reporting_standards.md) | Original summary of common neuropsychological report expectations; links to public professional resources (AACN, NAN, APA). |
+| [architecture/luria-skill-architecture.md](architecture/luria-skill-architecture.md) | Recommended long-term Luria skill system and directory rules. |
+| [workflows/refactor-review.md](workflows/refactor-review.md) | Refactor findings, code smells, and next-step recommendations for this workspace. |
+| [prompts/README.md](prompts/README.md) | Prompt placement rules and current prompt library map. |
 
-## Sibling skill: clinical-reports
+## Workspace guidance
 
-For HIPAA, FDA/ICH trial reporting, radiology/pathology/lab standards, SOAP/H&P/discharge templates, CARE case reports, and shared scripts (e.g., de-identification checker), see:
+- Put working prompts in [prompts/](prompts/README.md)
+- Put workflow and architecture docs in [workflows/](workflows/) and [architecture/](architecture/)
+- Keep report templates and checklists under `assets/`
 
-`~/.claude/skills/clinical-reports/references/README.md`
+## Helper skills
 
-Quick links:
-
-- Privacy / HIPAA: `clinical-reports/references/regulatory_compliance.md`
-- De-identification checklist: `clinical-reports/assets/hipaa_compliance_checklist.md`
-- Script: `clinical-reports/scripts/check_deidentification.py`
-- Tables and figures: `clinical-reports/references/data_presentation.md`
+The `luria-related-complement-skills/` folder is a helper-skill library. Those skills can be referenced from your Luria skills rather than copied.

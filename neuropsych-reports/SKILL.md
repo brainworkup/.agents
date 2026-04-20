@@ -781,13 +781,13 @@ indicated understanding and provided consent to proceed.
 
 ## Quality Assurance
 
-Before sign-out, use `assets/quality_checklist_neuropsych.md`. Run `check_deidentification.py` on drafts that will leave a clinical environment.
+Before sign-out, use [quality_checklist_neuropsych.md](assets/checklists/quality_checklist_neuropsych.md). Run [check_deidentification.py](scripts/check_deidentification.py) on drafts that will leave a clinical environment.
 
 ---
 
 ## Forensic Neuropsychological Addendum (Optional)
 
-Use when the evaluation is retained for legal, administrative, or court-related purposes. Append or integrate per jurisdiction and supervisor guidance. Template: `assets/forensic_neuropsych_addendum_template.md`.
+Use when the evaluation is retained for legal, administrative, or court-related purposes. Append or integrate per jurisdiction and supervisor guidance. Template: [forensic_neuropsych_addendum_template.md](assets/templates/forensic_neuropsych_addendum_template.md).
 
 Typical elements:
 
@@ -838,9 +838,10 @@ This skill integrates with:
 
 ### Automation Scripts
 
-- `scripts/classify_scores.py` — Convert raw/standard scores to normative classifications
-- `scripts/validate_neuropsych_report.py` — Check report completeness against required sections
-- `scripts/generate_score_table.py` — Generate formatted score tables from data input
+- [classify_scores.py](scripts/classify_scores.py) — Convert raw/standard scores to normative classifications
+- [score_engine.py](scripts/score_engine.py) — Shared score conversion and classification engine
+- [validate_neuropsych_report.py](scripts/validate_neuropsych_report.py) — Check report completeness against required sections
+- [generate_score_table.py](scripts/generate_score_table.py) — Generate formatted score tables from data input
 
 ---
 
@@ -873,3 +874,4 @@ Before finalizing any neuropsychological report, verify:
 ---
 
 **Final note**: Neuropsychological reports influence medical care, education, benefits, and legal proceedings. Prioritize accuracy, clarity, appropriate humility, and respect for the evaluee. When in doubt, narrow the conclusion and broaden the limitations.
+y, appropriate humility, and respect for the evaluee. When in doubt, narrow the conclusion and broaden the limitations.

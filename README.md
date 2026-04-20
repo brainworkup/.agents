@@ -37,3 +37,7 @@ Contributions are welcome! Please ensure:
 ## License
 
 See LICENSE file for details.
+
+[luria.agent.md](https://github.com/brainworkup/skills/blob/cd30b3813536098adaeaaad367aae9f828b28d1f/.github/agents/luria.agent.md#L7)
+
+- (luria agent)[[.github/agents/luria.agent.md]]

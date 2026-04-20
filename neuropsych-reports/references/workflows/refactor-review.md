@@ -38,62 +38,78 @@ The current workspace has strong content, but the architecture is overloaded.
 ## Script-specific recommendations
 
 ### `scripts/classify_scores.py`
+
 **Issues**
+
 - hard-coded classification systems
 - no schema validation for CSV input
 - minimal error handling for malformed rows
 - output contract is implicit, not documented in a machine-readable way
 
 **Refactor**
+
 - extract shared conversion/classification logic into a reusable module
 - define canonical classification systems explicitly
 - add validation for required CSV columns
 - emit structured JSON as an option
 
 ### `scripts/generate_score_table.py`
+
 **Issues**
+
 - duplicates logic from `classify_scores.py`
 - formatting and business logic are tightly coupled
 - CSV output is manually concatenated, which is fragile
 
 **Refactor**
+
 - import shared score engine from one place
 - separate parsing, normalization, and rendering
 - use Python CSV writer instead of raw string concatenation for CSV output
 
 ### `scripts/validate_neuropsych_report.py`
+
 **Issues**
+
 - regex-only section detection is brittle
 - content quality checks are mixed with completeness checks
 - warning logic is clever but hard to extend
 
 **Refactor**
+
 - split into `section_validator`, `quality_validator`, and `report_summary`
 - support configurable rule sets by report type
 - consider heading-based detection for markdown reports
 
 ### `scripts/compliance_checker.py`
+
 **Issues**
+
 - too broad for neuropsych workflow
 - likely false confidence from simple pattern matching
 - limited reporting detail
 
 **Refactor**
+
 - replace with separate neuropsych-focused review checks
 - keep HIPAA/de-identification as one tool
 - make consent/test-security/report-release checks separate
 
 ### `scripts/check_deidentification.py`
+
 **Strengths**
+
 - best-structured script of the current set
 - clearer output and recommendation logic
 
 **Remaining issues**
+
 - regex examples can return tuples because of capture groups
 - some patterns are noisy and may overflag
 - scanning text only may not be enough for structured reports later
 
 **Refactor**
+
 - normalize regex capture behavior
 - add ignore lists / allow-lists
 - output line-based locations where possible
@@ -136,6 +152,7 @@ neuropsych-reports/
 ## Prompts answer
 
 For your prompt set:
+
 - operational prompts used by the agent while reasoning → `references/prompts/`
 - prompt templates used as resources → `assets/templates/`
 - example prompt outputs → `assets/examples/`
